@@ -1,15 +1,13 @@
 require('pry')
 module Turn
   def player_turn
-    "Your turn!"
     puts "What is your choice?"
     user_input = gets.chomp.downcase
   end
   def computer_turn
     options = ["rock", "paper", "scissors"]
-    "Computer turn!"
     computer_choice = options[rand(options.length)]
-    puts "computer choose " + computer_choice
+    puts "Computer chose " + computer_choice + "."
   end
 end
 
@@ -17,7 +15,9 @@ class RPS
   include Turn
 
   def wins?(user_input, computer_choice)
-    if (user_input == "rock" && computer_choice == "scissors")
+    if (user_input == computer_choice)
+      puts "Tie game!"
+    elsif (user_input == "rock" && computer_choice == "scissors")
       puts "You win!"
       return true
     elsif (user_input == "scissors" && computer_choice == "paper")
