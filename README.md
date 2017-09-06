@@ -25,6 +25,15 @@ _This program will simulate the game Rock, Paper, Scissors._
 * Program will return true if scissors is the object and paper is the argument.
   * Example Input: "Scissors, paper"
   * Example Output: true
+* Program will return false if scissors is the object and rock is the argument.
+  * Example Input: "Scissors, rock"
+  * Example Output: false
+* Program will return false if rock is the object and paper is the argument.
+  * Example Input: "Rock, scissors"
+  * Example Output: false
+* Program will return false if paper is the object and scissors is the argument.
+  * Example Input: "Paper, scissors"
+  * Example Output: false
 
 
 ## Known Bugs
